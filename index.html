@@ -22,7 +22,7 @@
 		div.display {
 		  background: rgb(36, 36, 36);
 		  background: rgba(0, 0, 0, 0.7);
-		  box-shadow: 0 0 80px 1px rgba(0, 0, 0, 0.1), inset 0 0 200px 1px rgba(0, 0, 0, 0.1);
+		  box-shadow: 0 0 80px 1px rgba(0, 0, 0, 0.1), inset 0 0 200px 1px rgba(255, 255, 255, 0.1);
 		  padding-bottom: 30px;
 		}
 
@@ -58,18 +58,51 @@
 			 -moz-background-clip: text;
 				  background-clip: text;
 		  user-select: none;
+		  margin-right: 50px;
 		}
 
 		.textbody {
-		  font-family: TimesNewRoman
-		  font-size: 36px;
-		  color: white;
+		  font-family: Arial ;
+		  font-size: 16px;
+		  background-color: white;
+		  color: transparent;
+		  text-shadow: 0 0 1px #fff, 0 0 2px rgba(0,0,0);
 		  -webkit-background-clip: text;
 			 -moz-background-clip: text;
 				  background-clip: text;
 		  padding-left: 36px;
 		  padding-right: 36px;
 		  text-indent: 1em;
+		}
+		
+		p {
+		  font-family: Arial ;
+		  font-size: 16px;
+		  background-color: white;
+		  color: transparent;
+		  text-shadow: 0 0 1px #fff, 0 0 2px rgba(0,0,0);
+		  -webkit-background-clip: text;
+			 -moz-background-clip: text;
+				  background-clip: text;
+		  padding-left: 36px;
+		  padding-right: 36px;
+		  text-indent: 1em;
+		
+		}
+		
+		h1 {
+		  font-family: Syabil;
+		  font-weight: normal;
+		  font-size: 18px;
+		  background-color: white;
+		  color: transparent;
+		  text-shadow: 0 0 1px #fff, 0 0 2px rgba(0,0,0);
+		  -webkit-background-clip: text;
+			 -moz-background-clip: text;
+				  background-clip: text;
+		  padding-left: 36px;
+		  padding-right: 36px;
+		  text-indent: 0.5em;
 		}
 
 		</style>
@@ -85,7 +118,7 @@
 						<td>
 							<table class="navigation">
 							  <tr>
-								<td onclick="aboutUs()">Music</td>
+								<td onclick="aboutUs()">About Us</td>
 							  </tr>
 							  <tr>
 								<td onclick="link()">Links</td>
@@ -95,22 +128,34 @@
 							  </tr>
 							</table>
 						</td>
+						<td>
+							<table id="submenu" class="navigation">
+							</table>
+						</td>
 					  </tr>
 				</table>
-				<p class="textbody" id="contents"> 
-				</p>
+				<div class="textbody" id="contents"> 
+				</div>
 			</div>
-			<div class="footer">All right reserved</div>
+			<div class="footer">Copyright © 2024 WillPower. All rights reserved!</div>
 		</div>
 		<script>
 			function aboutUs() {
-			  document.getElementById("contents").innerHTML = "BAREBACK PIG FULL BLOWN AIDS FUCKER ..VIRAL OVER 1MIL .....NO MEDS.......................I AM THE MASTER OF BARESLAMPIG @ PORNHUB . HE IS A ARYAN AIDS WHORE THE BIGGEST IN EUROPE...... .............POZDOMFUCKER IS MY WHITE AIDS FUCKER. HE WANTS ME TO TAKE ALL AIDS COCKS 4 SATAN. I AM POZDOMFUCKER'S WHITE ARYAN METH WHORE TO USE AS A SLAMBOY . FILL MY VEINS WITH AIDS AND METH";
+			  document.getElementById("submenu").innerHTML = '<table class="navigation"><tr><td onclick="label()">Label</td> </tr><tr>	<td onclick="music()">Music</td>  </tr></table>'
 			}
 			function link() {
-			  document.getElementById("contents").innerHTML = "asfasfasfasfasf";
+			  document.getElementById("submenu").innerHTML = ''
+			  document.getElementById("contents").innerHTML = "<h1>Base of Operations</h1><p><a href=\"https://www.youtube.com/channel/UCbiFC6LBYox6MIIPJhqCHPA\" style=\"color:white\">Official Youtube channel</a></p>";
 			}
 			function contact() {
-			  document.getElementById("contents").innerHTML = "Long Text for testing.<br />But Chuck did give the best head in metal. David Vincent had his Azagthoth, and everyone in Vader had Doc, but no one made a pink cock erect like Chuck. True, as the AIDS infested his throat it made it hard for him to deep throat, but even as he lay there rotting, stinking of AZT and covered with Kaposi's sarcoma, Chuck would signal with two fingers when a willing donor came into the room. All I can offer in addition to that is the fact that no sex will ever compare to colostomy hole love, especially when the hole is fresh and supple after a well-greased movement.<br />We will never forget you, Chuck. Every time I hear your name my prostate aches, both for your tender heart-shaped ass and that incredibly thin, probing member we shared many times. It is heartbreaking how many things bring Chuck to mind. The sound of heavy metal. The flavor of Taco Bell food on the road. The scent of semen. The world lost not only a great musician, but a great lover, when Chuck died.<br />To say Chuck was gay is incorrect. He wasn\'t gay, he was just open-minded, and he sought anal sex from men, boys, girls and animals alike. Anal was not his favorite. His favorite was the blowjob, and he liked to be held afterwards, with someone stroking his hair and saying,<br />\"Chuck you are king of the world.\"<br />I will never sell the copy of Leprosy (80 grain vinyl) he left me at our last meeting. It is battered now, and reeks faintly of manpoo, and maybe it does have a few suspicious smears, but it is all I have of him. That and the memories. Those gushing, sticky, illicit, clandestine memories... Oh Chuck I miss you more than I can say.";
+			  document.getElementById("submenu").innerHTML = ''
+			  document.getElementById("contents").innerHTML = "<h1>Don't contact us.</h1>";
+			}
+			function label() {
+			  document.getElementById("contents").innerHTML = "<h1>What are we?</h1><p>A newly formed label hiding deep within the underground bringing old school industrial music to a new modern age.</p><h1>Who are we?</h1><p>Outcasts, Cultist, Sages and Disciples of violent militant nihilism cutting through the buzz of decaying cosmopolitan vacuity. We create art, by all means necessary. Music, audio-visual meditations, writing and philosophy.</p>";
+			}
+			function music() {
+			  document.getElementById("contents").innerHTML = "<h1>Vrezh</h1><p><iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/RBarvHN7XSo?si=WSGtJDxL8GktTtpK\"></iframe></p><h1>Divine Cervix</h1><p><iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/X4ecHuyAAX8\"></iframe></p><h1>Aryan AIDS</h1><p><iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/FMBSY9PO4bs\"></iframe></p>";
 			}
 		</script>
 	</body>
