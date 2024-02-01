@@ -33,7 +33,7 @@
 		  box-shadow: 0 0 80px 1px rgba(0, 0, 0, 0.1), inset 0 0 200px 1px rgba(255, 255, 255, 0.1);
 		  padding-bottom: 30px;
 		}
-
+		
 		div.footer {
 		  position: absolute;
 		  width:780px;
@@ -69,6 +69,34 @@
 		  margin-right: 50px;
 		}
 
+		td.navigation {
+		  text-shadow: 0 0 1px #fff, 0 0 2px rgba(0,0,0);
+		}
+
+		td.navigation:hover {
+		  text-shadow: 0 0 1px #fff, 0 0 1.5px rgba(255,255,255,0.6);
+		}
+		
+		.musicnavigation {
+		  width: 708px;
+          overflow: auto;
+		  font-family: Syabil;
+		  font-size: 20px;
+		  background-color: white;
+		  color: transparent;
+		  text-shadow: 0 0 1px #fff, 0 0 2px rgba(0,0,0);
+		  -webkit-background-clip: text;
+			 -moz-background-clip: text;
+				  background-clip: text;
+		  user-select: none;
+		}
+		
+		.musicnavigation a {
+		  text-align: center;
+		  width: 354px;
+		  float: left;
+		}
+
 		.textbody {
 		  font-family: Arial ;
 		  font-size: 16px;
@@ -101,7 +129,7 @@
 		h1 {
 		  font-family: Syabil;
 		  font-weight: normal;
-		  font-size: 18px;
+		  font-size: 21px;
 		  background-color: white;
 		  color: transparent;
 		  text-shadow: 0 0 1px #fff, 0 0 2px rgba(0,0,0);
@@ -112,6 +140,7 @@
 		  padding-right: 36px;
 		  text-indent: 0.5em;
 		}
+
 
 		</style>
 	</head>
@@ -126,13 +155,13 @@
 						<td>
 							<table class="navigation">
 							  <tr>
-								<td onclick="aboutUs()">About Us</td>
+								<td onclick="aboutUs()" class="navigation">About Us</td>
 							  </tr>
 							  <tr>
-								<td onclick="link()">Links</td>
+								<td onclick="link()" class="navigation">Links</td>
 							  </tr>
 							  <tr>
-								<td onclick="contact()">Contact</td>
+								<td onclick="contact()" class="navigation">Contact</td>
 							  </tr>
 							</table>
 						</td>
@@ -149,21 +178,30 @@
 		</div>
 		<script>
 			function aboutUs() {
-			  document.getElementById("submenu").innerHTML = '<table class="navigation"><tr><td onclick="label()">Label</td> </tr><tr>	<td onclick="music()">Music</td>  </tr></table>'
+			  document.getElementById("submenu").innerHTML = '<table class="navigation"><tr><td onclick="label()" class="navigation">Label</td> </tr><tr>	<td onclick="music()" class="navigation">Music</td>  </tr></table>'
 			}
 			function link() {
 			  document.getElementById("submenu").innerHTML = ''
-			  document.getElementById("contents").innerHTML = "<h1>Base of Operations</h1><p><a href=\"https://www.youtube.com/channel/UCbiFC6LBYox6MIIPJhqCHPA\" style=\"color:white\">Official Youtube channel</a></p>";
+			  document.getElementById("contents").innerHTML = "<p> Our bases </br></br></p><p><a href=\"https://www.youtube.com/channel/UCbiFC6LBYox6MIIPJhqCHPA\" style=\"color:white\">YouTube</a></p><p><a href=\"https://www.instagram.com/willpower.records\" style=\"color:white\">Instagram</a></p></br><p>Brotherhoods</p></br><p><a href=\"https://hessianfirm.com\" style=\"color:white\">Hessian Firm</a></br></p>";
 			}
 			function contact() {
 			  document.getElementById("submenu").innerHTML = ''
 			  document.getElementById("contents").innerHTML = "<h1>Don't contact us.</h1>";
 			}
 			function label() {
-			  document.getElementById("contents").innerHTML = "<h1>What are we?</h1><p>A newly formed label hiding deep within the underground bringing old school industrial music to a new modern age.</p><h1>Who are we?</h1><p>Outcasts, Cultist, Sages and Disciples of violent militant nihilism cutting through the buzz of decaying cosmopolitan vacuity. We create art, by all means necessary. Music, audio-visual meditations, writing and philosophy.</p>";
+			  document.getElementById("contents").innerHTML = "<h1>What are we?</h1><p>A newly formed label operating deep within the underground to bring old-school industrial music to a new modern era.</p><h1>Who are we?</h1><p>Musicians, Artists, Cultists and Philosophers. We create art, by all means necessary.</p>";
 			}
 			function music() {
-			  document.getElementById("contents").innerHTML = "<h1>Vrezh</h1><p><iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/RBarvHN7XSo?si=WSGtJDxL8GktTtpK\"></iframe></p><h1>Divine Cervix</h1><p><iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/X4ecHuyAAX8\"></iframe></p><h1>Aryan AIDS</h1><p><iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/FMBSY9PO4bs\"></iframe></p>";
+			  document.getElementById("contents").innerHTML = '<h1 onclick="vrezh()">Vrezh</h1> <h1 onclick="divineCervix()">Divine Cervix</h1> <h1 onclick="aryanAIDS()">Aryan AIDS</h1>';
+			}
+			function vrezh() {
+			  document.getElementById("contents").innerHTML = '<h1>Vrezh</h1><p>The first ever project to release on Willpower confidently sets the tone for rest of the movement. With DIY approach to musical composition, Vrezh sets to explore the human condition throughout it\'s history and the occult forces driving the species.</br></br> <iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/RBarvHN7XSo\"></iframe> </p>';
+			}
+			function divineCervix() {
+			  document.getElementById("contents").innerHTML = "<h1>Divine Cervix</h1><p>The oldest project to follow the philosophy of Willpower, since its inception Divine Cervix has taken a unique approach to showcasing it's viscera, sexual deviancy and urban misanthropy. </br></br> <iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/X4ecHuyAAX8\"></iframe></p>";
+			}
+			function aryanAIDS() {
+			  document.getElementById("contents").innerHTML = "<h1>Aryan AIDS</h1><p>Aryan AIDS is an audiovisual ritual in a total non-conformity with the modern world. Emerging from ruins of ancient mediterrenean cults and traditions, with it's complex soundscapes and driving rhythms it stimulates primordial memories and strengthens the long lost psychic connections with humanity's ancient past. </br></br> <iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/FMBSY9PO4bs\"></iframe></p>";
 			}
 		</script>
 	</body>
