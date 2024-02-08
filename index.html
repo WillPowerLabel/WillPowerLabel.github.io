@@ -153,7 +153,7 @@
 							<img src="wplogo.png" height=125 width=125 style="padding: 20px 25px">
 						</td>
 						<td>
-							<table class="navigation">
+							<table class="navigation" style="padding-top: 5px"">
 							  <tr>
 								<td onclick="aboutUs()" class="navigation">About Us</td>
 							  </tr>
@@ -162,6 +162,9 @@
 							  </tr>
 							  <tr>
 								<td onclick="contact()" class="navigation">Contact</td>
+							  </tr>
+							  <tr>
+								<td onclick="shop()" class="navigation">Shop</td>
 							  </tr>
 							</table>
 						</td>
@@ -182,7 +185,7 @@
 			}
 			function link() {
 			  document.getElementById("submenu").innerHTML = ''
-			  document.getElementById("contents").innerHTML = "<p> Our bases </br></br></p><p><a href=\"https://www.youtube.com/channel/UCbiFC6LBYox6MIIPJhqCHPA\" style=\"color:white\">YouTube</a></p><p><a href=\"https://www.instagram.com/willpower.records\" style=\"color:white\">Instagram</a></p></br><p>Brotherhoods</p></br><p><a href=\"https://hessianfirm.com\" style=\"color:white\">Hessian Firm</a></br></p>";
+			  document.getElementById("contents").innerHTML = "<table><tr><td><h1> Official websites</h1></br><h1><a href=\"https://www.youtube.com/channel/UCbiFC6LBYox6MIIPJhqCHPA\" style=\"color:white\">YouTube</a></h1><h1><a href=\"https://www.instagram.com/willpower.records\" style=\"color:white\">Instagram</a></h1><h1><a href=\"https://www.discogs.com/user/willpowerrecords\" style=\"color:white\">Discogs</a></h1><h1><a href=\"https://willpowerrecords.bigcartel.com/\" style=\"color:white\">Big Cartel</a></h1></br></td><td valign=top><h1>Brotherhoods</h1></br><h1><a href=\"https://hessianfirm.com\" style=\"color:white\">Hessian Firm</a></br></h1></tr></table>";
 			}
 			function contact() {
 			  document.getElementById("submenu").innerHTML = ''
@@ -192,7 +195,7 @@
 			  document.getElementById("contents").innerHTML = "<h1>What are we?</h1><p>A newly formed label operating deep within the underground to bring old-school industrial music to a new modern era.</p><h1>Who are we?</h1><p>Musicians, Artists, Cultists and Philosophers. We create art, by all means necessary.</p>";
 			}
 			function music() {
-			  document.getElementById("contents").innerHTML = '<h1 onclick="vrezh()">Vrezh</h1> <h1 onclick="divineCervix()">Divine Cervix</h1> <h1 onclick="aryanAIDS()">Aryan AIDS</h1>';
+			  document.getElementById("contents").innerHTML = '<h1 onclick="vrezh()">Vrezh</h1> <h1 onclick="divineCervix()">Divine Cervix</h1> <h1 onclick="aryanAIDS()">Aryan AIDS</h1> <h1 onclick="Peacekeeper134()">Peacekeeper134</h1>';
 			}
 			function vrezh() {
 			  document.getElementById("contents").innerHTML = '<h1>Vrezh</h1><p>The first ever project to release on Willpower confidently sets the tone for rest of the movement. With DIY approach to musical composition, Vrezh sets to explore the human condition throughout it\'s history and the occult forces driving the species.</br></br> <iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/RBarvHN7XSo\"></iframe> </p>';
@@ -202,6 +205,12 @@
 			}
 			function aryanAIDS() {
 			  document.getElementById("contents").innerHTML = "<h1>Aryan AIDS</h1><p>Aryan AIDS is an audiovisual ritual in a total non-conformity with the modern world. Emerging from ruins of ancient mediterrenean cults and traditions, with it's complex soundscapes and driving rhythms it stimulates primordial memories and strengthens the long lost psychic connections with humanity's ancient past. </br></br> <iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/FMBSY9PO4bs\"></iframe></p>";
+			}
+			function Peacekeeper134() {
+			  document.getElementById("contents").innerHTML = "<h1>Peacekeeper134</h1><p>Crime, disorder, law. Dedicated to all unwilling lambs to the slaughter. </br></br> <iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/68Kd1zuHy38\"></iframe></p>";
+			}
+			function shop(){
+				window.open("https://willpowerrecords.bigcartel.com/");
 			}
 		</script>
 	</body>
